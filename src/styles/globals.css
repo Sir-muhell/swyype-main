@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("./Navbar.css");
+@font-face {
+  font-family: "clash-display";
+  src: url("/fonts/clash-display.ttf");
+}
+@font-face {
+  font-family: "SpaceGrotesk-Bold";
+  src: url("/fonts/SpaceGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "SpaceGrotesk-Light";
+  src: url("/fonts/SpaceGrotesk-Light.ttf");
+}
+@font-face {
+  font-family: "SpaceGrotesk-Medium";
+  src: url("/fonts/SpaceGrotesk-Medium.ttf");
+}
+@font-face {
+  font-family: "SpaceGrotesk-Regular";
+  src: url("/fonts/SpaceGrotesk-Regular.ttf");
+}
+@font-face {
+  font-family: "SpaceGrotesk-SemiBold";
+  src: url("/fonts/SpaceGrotesk-SemiBold.ttf");
+}
+
+:root {
+  --primary: #171717;
+  --secondary: #000000;
+}
+
+.active{
+  color:black;
+}
+.dimmedCOlors{
+  color:gray;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.box {
+  @apply rounded shadow;
+  /* width: 60%; */
+}
+.boxSmall {
+  box-shadow: 0px 9px 9px rgb(132, 129, 129);
+  
+}
+input {
+  border: 2px gray solid;
+  
+}
+
+@layer base {
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  *::-webkit-scrollbar-track {
+    /* border-radius: 1px; */
+  }
+
+  *::-webkit-scrollbar-thumb {
+    /* background-color: var(--secondary); */
+    background:
+      var(--secondary);
+    border-radius: 7px;
+    /* border: 3px solid var(--primary); */
+  }
+  .nav-li {
+    @apply transition-all ease-[ease] opacity-[0.8];
+  }
+
+  .nav-li:hover :not(:hover) {
+    opacity: 0.3;
+  }
+
+  .nav-li:hover {
+    scale: 1.1;
+    @apply opacity-[1] font-clash-display;
+  }
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+*,html {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}

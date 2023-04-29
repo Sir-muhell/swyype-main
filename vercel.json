@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/Create",
+            "destination": "/create",
+            "permanent": false
+        }
+    ]
+}
